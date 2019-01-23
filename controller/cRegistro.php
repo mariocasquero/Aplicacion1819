@@ -3,11 +3,13 @@
     
     $aErrores=[
         "usuario"=>NULL,
-        "password"=>NULL
+        "descripcion"=>NULL,
+        "password"=>NULL,
     ];
-    
-    if(isset($_REQUEST["acceder"])){
+
+    if(isset($_REQUEST["aceptar"])){
         $aErrores["usuario"]=validacionFormularios::comprobarAlfabetico($_REQUEST["usuario"], 8, 1, 1);
+        $aErrores["descripcion"]=validacionFormularios::comprobarAlfaNumerico($_REQUEST["descripcion"], 100, 3, 1);
         $aErrores["password"]=validacionFormularios::comprobarAlfaNumerico($_REQUEST["password"], 30, 1, 1);
         
         foreach($aErrores as $campo=>$error){ //Se recorre el array en busca de errores 
@@ -18,18 +20,15 @@
         }
     }
     
-    if(isset($_REQUEST["registrarse"])){
-        $_SESSION["pagina"]="registro";
-        require_once $vistas["layout"];
-    }
-    
-    if(isset($_REQUEST["acceder"]) && $entradaOK){
+    if(isset($_REQUEST["aceptar"]) && $entradaOK){
         $codUsuario=$_REQUEST["usuario"];
+        $descripcion=$_REQUEST["descripcion"];
         $password=$_REQUEST["password"];
-        $usuario=Usuario::validarUsuario($codUsuario, $password);
+        
+        $usuario=Usuario::altaUsuario($codUsuario, $password, $descUsuario);
         
         if(is_null($usuario)){
-            $_SESSION["pagina"]="login";
+            $_SESSION["pagina"]="registro";
             require_once $vistas["layout"];
         }
         else{
@@ -40,7 +39,9 @@
         }
     }
     else{
-        $_SESSION["pagina"]="login";
+        $_SESSION["pagina"]="registro";
         require_once $vistas["layout"];
     }
+    
 ?>
+

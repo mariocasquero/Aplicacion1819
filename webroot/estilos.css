@@ -19,13 +19,17 @@ header{
     
 }
 
-#login{
+#login, #registro{
     width: 350px;
     position: absolute;
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
     color: dimgrey;
+}
+
+#registro{
+    width: 450px;
 }
 
 legend{
@@ -36,6 +40,11 @@ legend{
 #usuario, #password{
     position: absolute;
     left: 100px;
+}
+
+#usuarioR, #passwordR, #descripcionR{
+    position: absolute;
+    left: 130px;
 }
 
 #salir{

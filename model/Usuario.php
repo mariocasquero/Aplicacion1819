@@ -33,4 +33,20 @@ class Usuario{
             }
         return $usuario;
     }
+    
+    public static function altaUsuario($codUsuario, $password, $descUsuario){
+        
+        if($this::validarCodNoExiste($codUsuario)){
+            $altaConExito=UsuarioPDO::altaUsuario($codUsuario, $password, $descUsuario);
+        }
+        
+        if($altaConExito){
+            $usuario=new Usuario($codUsuario, $password, $descUsuario, 0, 0, 'usuario');
+        }
+        return $usuario;
+    }
+    
+    public static function validarCodNoExiste($codUsuario){
+        return UsuarioPDO::validarCodNoExiste($codUsuario);
+    }
 }
