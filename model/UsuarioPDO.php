@@ -8,7 +8,7 @@
 require_once "DBPDO.php";
 class UsuarioPDO{
     public static function validarUsuario($codUsuario, $password){
-        $sql="select * from Usuarios where codUsuario=? and password=SHA(?, 256)";
+        $sql="select * from Usuarios where codUsuario=? and password=SHA2(?, 256)";
         $aUsuario=[];
         
         $resultado=DBPDO::ejecutaConsulta($sql, [$codUsuario, $password]);

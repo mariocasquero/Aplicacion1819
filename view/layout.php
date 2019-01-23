@@ -16,6 +16,8 @@
         <title>MCJ Aplicacion1819</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="webroot/estilos.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     </head>
     
     <body>
@@ -26,7 +28,7 @@
             require_once $vista;
         ?>
         <footer>
-            <p>Mario Casquero Jáñez &copy; 2019 DAW2</p>
+            <p><a href="../indexProyectoDWES.php"><i class="fas fa-home"></i></a> Mario Casquero Jáñez &copy; 2019 DAW2 <a href=""><i class="fab fa-gitlab"></i></a></p>
         </footer>
     </body>
 </html>

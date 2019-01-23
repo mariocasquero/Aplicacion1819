@@ -4,14 +4,24 @@
 */
 body{
     margin: 0px;
+    margin-top: -20px;
     background-color: honeydew;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
+    margin-top: 20px;
     text-align: center;
     height: 60px;
     color: dimgrey;
-    background-image: lineaar-gradient(lawngreen, honeydew);
+    background-image: linear-gradient(lawngreen, honeydew);
+    -moz-background-image: linear-gradient(lawngreen, honeydew);
+    
+}
+
+i{
+    text-decoration: none;
+    color: dimgrey;
 }
 
 footer{
@@ -19,6 +29,8 @@ footer{
     bottom: 0px;
     width: 100%;
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
     color: dimgrey;
-    background-image: lineaar-gradient(honeydew, lawngreen);
+    background-image: linear-gradient(honeydew, lawngreen);
 }

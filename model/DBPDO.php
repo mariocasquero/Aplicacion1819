@@ -12,11 +12,13 @@ class DBPDO{
             $consulta=$miDataBase->prepare($sql);
             $consulta->execute($parametros);
         }catch(PDOException $pdoe){
-            $resultadoConsulta=NULL;
-            echo "Código de eror: ".$pdoe->getCode();
+            $consulta=NULL;
+            echo "Mensaje de error: ".$pdoe->getMessage()."<br>";
+            echo "Código de error: ".$pdoe->getCode()."<br>";
             echo "Línea de error: ".$pdoe->getLine();
             unset($miDataBase);
         }
         return $consulta;
     }    
 }
+?>

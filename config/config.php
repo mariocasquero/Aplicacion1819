@@ -1,5 +1,6 @@
 <?php
     require_once "core/181025validacionFormularios.php";
+    require "model/Usuario.php";
     
     $controladores=[
         "login"=>"controller/cLogin.php",
