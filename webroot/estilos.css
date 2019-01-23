@@ -4,7 +4,7 @@
 */
 body{
     margin: 0px;
-    margin-top: -20px;
+    margin-top: -22.5px;
     background-color: honeydew;
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,6 +17,45 @@ header{
     background-image: linear-gradient(lawngreen, honeydew);
     -moz-background-image: linear-gradient(lawngreen, honeydew);
     
+}
+
+#login{
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    color: dimgrey;
+}
+
+legend{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#usuario, #password{
+    position: absolute;
+    left: 100px;
+}
+
+#salir{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4em;
+}
+
+.errores{
+    color: red;
+    text-align: center;
+}
+
+[type="submit"]{
+    font-size: 1.1em;
+    color: dimgrey;
+    background-color: honeydew;
+    border-radius: 10px;
 }
 
 i{

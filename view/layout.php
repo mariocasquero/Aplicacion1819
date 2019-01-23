@@ -28,7 +28,7 @@
             require_once $vista;
         ?>
         <footer>
-            <p><a href="../indexProyectoDWES.php"><i class="fas fa-home"></i></a> Mario Casquero Jáñez &copy; 2019 DAW2 <a href=""><i class="fab fa-gitlab"></i></a></p>
+            <p><a href="../indexProyectoDWES.php"><i class="fas fa-home"></i></a> Mario Casquero Jáñez &copy; 2019 DAW2 <a href="https://github.com/mariocasquero/Aplicacion1819" target="_blank"><i class="fab fa-gitlab"></i></a></p>
         </footer>
     </body>
 </html>
