@@ -20,7 +20,9 @@
     
     if(isset($_REQUEST["registrarse"])){
         $_SESSION["pagina"]="registro";
+        header("../index.php");
         require_once $vistas["layout"];
+        exit;
     }
     
     if(isset($_REQUEST["acceder"]) && $entradaOK){

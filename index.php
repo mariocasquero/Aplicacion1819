@@ -5,14 +5,17 @@
     session_start();
     
     if(isset($_SESSION["usuario"]) && !isset($_SESSION["pagina"])){
-        include_once $controladores["inicio"];
+        $controlador=$controladores["inicio"];
+        include_once $controlador;
     }
     
     if(isset($_SESSION["pagina"])){
-        include_once $controladores[$_SESSION["pagina"]];
+        $controlador=$controladores[$_SESSION["pagina"]];
+        include_once $controlador;
     }
     else{
-        include_once $controladores["login"];
+        $controlador=$controladores["login"];
+        include_once $controlador;
     }
     
 ?>
